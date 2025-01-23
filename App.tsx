@@ -2,12 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
+    {/*Edit BUTTON (TouchableOpacity): Currently set as an ALERT*/}
+    <TouchableOpacity onPress={() => alert("This is a test ALERT. \n\nEdit functionality will go here.")}>
       <Text style={styles.iconText}>Edit</Text>
+    </TouchableOpacity>
 
       <Text style={styles.textHeader}>Folders</Text>
 

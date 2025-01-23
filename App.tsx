@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function App() {
   return (
@@ -15,19 +17,45 @@ export default function App() {
         <Text style={styles.textSearch}>Search</Text>
       </View>
 
+
+
       <View style={styles.whiteBox}>
-        <Text style={styles.textButtons}>Quick notes</Text>
+
+        <View style={styles.iconTextWrapper}>
+          <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
+          <Text style={styles.textButtons}>Quick Notes</Text>
+        </View>
+
         <View style={styles.whiteBoxLine}/>
-        <Text style={styles.textButtons}>Shared</Text>
+
+        <View style={styles.iconTextWrapper}>
+          <AntDesign name='user' size={24} color='#E4AF0B'/>
+          <Text style={styles.textButtons}>Shared</Text>
+        </View>
+
       </View>
+
 
       <Text style={styles.textSubHeader}>iCloud</Text>
 
+
       <View style={styles.whiteBox}>
-        <Text style={styles.textButtons}>Notes</Text>
+        
+        <View style={styles.iconTextWrapper}>
+          <AntDesign name='folder1' size={24} color='#E4AF0B'/>
+          <Text style={styles.textButtons}>Notes</Text>
+        </View>
+
         <View style={styles.whiteBoxLine}/>
-        <Text style={styles.textButtons}>Recently Deleted</Text>
+
+        <View style={styles.iconTextWrapper}>
+          <AntDesign name='delete' size={24} color='#E4AF0B'/>
+          <Text style={styles.textButtons}>Recently Deleted</Text>
+        </View>
+
       </View>
+
+      
     </View>
 
 
@@ -97,7 +125,7 @@ const styles = StyleSheet.create({
     fontWeight: 'regular',
     fontSize: 20,
     color: 'black',
-    marginLeft: 55,
+    marginLeft: 20,
   }
   ,
   iconText: { // Style for button text
@@ -107,6 +135,11 @@ const styles = StyleSheet.create({
     marginTop: 40,
     marginRight: 30,
     alignSelf: 'flex-end',
+  },
+  iconTextWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: 10,
   }
   // Orange icons are #E4AF0B
   // White box lines are #C6C5CA

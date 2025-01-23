@@ -8,10 +8,10 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-    {/*Edit BUTTON (TouchableOpacity): Currently set as an ALERT*/}
-    <TouchableOpacity onPress={() => alert("This is a test ALERT. \n\nEdit functionality will go here.")}>
-      <Text style={styles.iconText}>Edit</Text>
-    </TouchableOpacity>
+      {/*Edit BUTTON (TouchableOpacity): Currently set as an ALERT*/}
+      <TouchableOpacity onPress={() => alert("This is a test ALERT. \n\nEdit functionality will go here.")}>
+        <Text style={styles.iconText}>Edit</Text>
+      </TouchableOpacity>
 
       <Text style={styles.textHeader}>Folders</Text>
 
@@ -26,14 +26,14 @@ export default function App() {
       <View style={styles.whiteBox}>
 
         <View style={styles.iconTextWrapper}>
-          <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
+          <AntDesign name='filetext1' size={24} color='#E4AF0B' />
           <Text style={styles.textButtons}>Quick Notes</Text>
         </View>
 
-        <View style={styles.whiteBoxLine}/>
+        <View style={styles.whiteBoxLine} />
 
         <View style={styles.iconTextWrapper}>
-          <AntDesign name='user' size={24} color='#E4AF0B'/>
+          <AntDesign name='user' size={24} color='#E4AF0B' />
           <Text style={styles.textButtons}>Shared</Text>
         </View>
 
@@ -44,22 +44,30 @@ export default function App() {
 
 
       <View style={styles.whiteBox}>
-        
+
         <View style={styles.iconTextWrapper}>
-          <AntDesign name='folder1' size={24} color='#E4AF0B'/>
+          <AntDesign name='folder1' size={24} color='#E4AF0B' />
           <Text style={styles.textButtons}>Notes</Text>
         </View>
 
-        <View style={styles.whiteBoxLine}/>
+        <View style={styles.whiteBoxLine} />
 
         <View style={styles.iconTextWrapper}>
-          <AntDesign name='delete' size={24} color='#E4AF0B'/>
+          <AntDesign name='delete' size={24} color='#E4AF0B' />
           <Text style={styles.textButtons}>Recently Deleted</Text>
         </View>
 
+
+
+
       </View>
 
-      
+
+      <TouchableOpacity style={styles.AlertButton} onPress={() => alert("This is a test ALERT. \n\nEdit functionality will go here.")}>
+        <Text style={styles.alertText}>Alert</Text>
+      </TouchableOpacity>
+
+
     </View>
 
 
@@ -67,6 +75,24 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  AlertButton: {
+    position: "absolute",
+    top: "85%", // Kept your top value as it was duplicated
+    width: "80%",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    left: "10%",
+    borderRadius: 20, // Adjust this value for roundness
+    borderColor: "#000",
+    borderWidth: 1,
+  },
+  alertText: { // Style for button text
+    fontWeight: 'regular',
+    fontSize: 20,
+    color: '#E4AF0B',
+    marginTop: 10,
+    marginBottom: 10,
+  },
   container: {
     flex: 1,
     flexDirection: 'column',

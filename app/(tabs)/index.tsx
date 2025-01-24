@@ -4,6 +4,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { TouchableOpacity } from 'react-native';
 import { ExpoRouter } from "expo-router";
+import { Link } from 'expo-router';
 
 //export default ExpoRouter;
 
@@ -25,23 +26,25 @@ export default function App() {
 
       <View style={styles.whiteBox}>
 
-        <View style={styles.iconTextWrapper}>
-          <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
+        <Link href="/notes" style={styles.iconTextWrapper}>
 
-          <TouchableOpacity style={styles.textButtons} onPress={() => {this.props.navigation.navigate("notes");}}>
+          <View style={styles.iconTextWrapper}>
+            
+            <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
+
             <Text style={styles.textButtons}>Notes App Lab</Text>
-          </TouchableOpacity>
+            
+          </View>
 
-        </View>
+        </Link>
 
         <View style={styles.whiteBoxLine}/>
 
         <View style={styles.iconTextWrapper}>
           <AntDesign name='user' size={24} color='#E4AF0B'/>
           
-          <TouchableOpacity style={styles.textButtons} onPress={() => alert("This is a test ALERT. \n\nYou Pressed Button 2")}>
-            <Text style={styles.textButtons}>N/A</Text>
-          </TouchableOpacity>
+          <Text style={styles.textButtons}>N/A</Text>
+
 
         </View>
 
@@ -56,9 +59,8 @@ export default function App() {
         <View style={styles.iconTextWrapper}>
           <AntDesign name='folder1' size={24} color='#E4AF0B'/>
           
-          <TouchableOpacity style={styles.textButtons} onPress={() => alert("This is a test ALERT. \n\nYou Pressed Button 3")}>
-            <Text style={styles.textButtons}>N/A</Text>
-          </TouchableOpacity>
+          <Text style={styles.textButtons}>N/A</Text>
+
 
         </View>
 
@@ -66,10 +68,8 @@ export default function App() {
 
         <View style={styles.iconTextWrapper}>
           <AntDesign name='delete' size={24} color='#E4AF0B'/>
-          
-          <TouchableOpacity style={styles.textButtons} onPress={() => alert("This is a test ALERT. \n\nYou Pressed Button 4")}>
-            <Text style={styles.textButtons}>N/A</Text>
-          </TouchableOpacity>
+
+          <Text style={styles.textButtons}>N/A</Text>
 
         </View>
 
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     fontWeight: 'regular',
     fontSize: 20,
     color: 'black',
-    marginLeft: 10,
+    marginLeft: 20,
   }
   ,
   iconText: { // Style for button text

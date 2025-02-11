@@ -40,13 +40,17 @@ export default function App() {
 
         <View style={styles.whiteBoxLine}/>
 
-        <View style={styles.iconTextWrapper}>
-          <AntDesign name='user' size={24} color='#E4AF0B'/>
-          
-          <Text style={styles.textButtons}>N/A</Text>
+        <Link href="/lab_3" style={styles.iconTextWrapper}>
+
+          <View style={styles.iconTextWrapper}>
+
+            <AntDesign name='user' size={24} color='#E4AF0B'/>
+            
+            <Text style={styles.textButtons}>Lab 3</Text>
 
 
-        </View>
+          </View>
+        </Link>
 
       </View>
 

@@ -18,68 +18,15 @@ export default function App() {
 
       <StatusBar style="auto" />
 
-      <View style={styles.greyBox}>
-        <Text style={styles.textSearch}>Search</Text>
+      <View style={styles.loginBox}>
+        <Text style={styles.textLogin}>Username</Text>
+      </View>
+
+      <View style={styles.loginBox}>
+        <Text style={styles.textLogin}>Password</Text>
       </View>
 
 
-
-      <View style={styles.whiteBox}>
-
-        <Link href="/notes" style={styles.iconTextWrapper}>
-
-          <View style={styles.iconTextWrapper}>
-            
-            <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
-
-            <Text style={styles.textButtons}>Notes App Lab</Text>
-            
-          </View>
-
-        </Link>
-
-        <View style={styles.whiteBoxLine}/>
-
-        <Link href="/lab_3" style={styles.iconTextWrapper}>
-
-          <View style={styles.iconTextWrapper}>
-
-            <AntDesign name='user' size={24} color='#E4AF0B'/>
-            
-            <Text style={styles.textButtons}>Lab 3</Text>
-
-
-          </View>
-        </Link>
-
-      </View>
-
-
-      <Text style={styles.textSubHeader}>iCloud</Text>
-
-
-      <View style={styles.whiteBox}>
-        
-        <View style={styles.iconTextWrapper}>
-          <AntDesign name='folder1' size={24} color='#E4AF0B'/>
-          
-          <Text style={styles.textButtons}>N/A</Text>
-
-
-        </View>
-
-        <View style={styles.whiteBoxLine}/>
-
-        <View style={styles.iconTextWrapper}>
-          <AntDesign name='delete' size={24} color='#E4AF0B'/>
-
-          <Text style={styles.textButtons}>N/A</Text>
-
-        </View>
-
-      </View>
-
-      
     </View>
 
 
@@ -113,7 +60,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-  greyBox: { // Style for grey search bar
+  loginBox: { // Style for grey search bar
     backgroundColor: '#E4E3E9',
     borderWidth: 0,
     borderRadius: 20,
@@ -139,7 +86,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 10,
   },
-  textSearch: { // Style for search bar text
+  textLogin: { // Style for search bar text
     fontWeight: 'regular',
     fontSize: 20,
     color: '#807F85',

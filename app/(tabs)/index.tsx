@@ -5,6 +5,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { TouchableOpacity } from 'react-native';
 import { ExpoRouter } from "expo-router";
 import { Link } from 'expo-router';
+import Login from '../../components/login';
 
 //export default ExpoRouter;
 
@@ -16,31 +17,7 @@ export default function App() {
 
       <StatusBar style="auto" />
 
-      <View style={styles.loginBox}>
-        <TextInput style={styles.textLogin}>Username</TextInput>
-      </View>
-
-      <View style={styles.loginBox}>
-        <TextInput style={styles.textLogin}>Password</TextInput>
-      </View>
-
-
-      <View style={styles.whiteBox}>
-        <Link href="/notes" style={styles.iconTextWrapper}>
-          <View style={styles.iconTextWrapper}>
-            <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
-            <Text style={styles.textButtons}>Sign In</Text>
-          </View>
-        </Link>
-        <View style={styles.whiteBoxLine}/>
-        <Link href="/lab_3" style={styles.iconTextWrapper}>
-          <View style={styles.iconTextWrapper}>
-            <AntDesign name='user' size={24} color='#E4AF0B'/>
-            <Text style={styles.textButtons}>Register</Text>
-          </View>
-        </Link>
-      </View>
-
+      <Login/>
 
     </View>
 

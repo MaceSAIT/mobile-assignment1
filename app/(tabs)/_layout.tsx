@@ -35,6 +35,8 @@ export default function TabLayout() {
         options={{
           title: 'Login',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+          tabBarStyle: {display: 'none'}, // Hide the nav bar when in the login screen
+          href: null,
         }}
       />
       <Tabs.Screen

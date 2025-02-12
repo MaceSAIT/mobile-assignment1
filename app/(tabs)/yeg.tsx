@@ -6,15 +6,18 @@ import { TouchableOpacity } from 'react-native';
 import { ExpoRouter } from "expo-router";
 import { Link } from 'expo-router';
 import { Image } from 'expo-image';
+import Hyperlink from '../../components/hyperlink';
+import Logout from '../../components/logout';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
 
+      <Logout text="Logout"/>
 
       <Text style={styles.textHeader}>Edmonton</Text>
-      <Link style={styles.linkText} href='https://www.edmonton.ca/'>City Page</Link>
+      <Hyperlink link='https://www.edmonton.ca/' text='City Page'/>
       <Image source={{uri: 'https://cityuniversity.ca/wp-content/uploads/2021/01/iStock-1136615456-scaled.jpg'}} style={{width: 250, height: 250, alignSelf: 'center'}}/>
 
 
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 50,
     color: 'black',
     marginLeft: 40,
-    marginTop: 20,
+    marginTop: 5,
   },
   textSubHeader: { // Style for the sub header
     fontWeight: 'bold',

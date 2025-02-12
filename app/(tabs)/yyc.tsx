@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput} from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { TouchableOpacity } from 'react-native';
 import { ExpoRouter } from "expo-router";
 import { Link } from 'expo-router';
+import { Image } from 'expo-image';
 
 //export default ExpoRouter;
 
@@ -12,36 +13,58 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.textHeader}>Login</Text>
+      <Text style={styles.textHeader}>Calgary</Text>
+
+      <Link style={styles.linkText} href='https://www.calgary.ca/home.html'>City Page</Link>
+
+      <Image source={require('calgary')}></Image>
 
       <StatusBar style="auto" />
 
-      <View style={styles.loginBox}>
-        <TextInput style={styles.textLogin}>Username</TextInput>
-      </View>
-
-      <View style={styles.loginBox}>
-        <TextInput style={styles.textLogin}>Password</TextInput>
-      </View>
 
 
       <View style={styles.whiteBox}>
         <Link href="/notes" style={styles.iconTextWrapper}>
           <View style={styles.iconTextWrapper}>
             <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
-            <Text style={styles.textButtons}>Sign In</Text>
+            <Text style={styles.textButtons}>Notes App Lab</Text>
           </View>
         </Link>
         <View style={styles.whiteBoxLine}/>
         <Link href="/lab_3" style={styles.iconTextWrapper}>
           <View style={styles.iconTextWrapper}>
             <AntDesign name='user' size={24} color='#E4AF0B'/>
-            <Text style={styles.textButtons}>Register</Text>
+            <Text style={styles.textButtons}>Lab 3</Text>
           </View>
         </Link>
       </View>
 
 
+      <Text style={styles.textSubHeader}>iCloud</Text>
+
+
+      <View style={styles.whiteBox}>
+        
+        <View style={styles.iconTextWrapper}>
+          <AntDesign name='folder1' size={24} color='#E4AF0B'/>
+          
+          <Text style={styles.textButtons}>N/A</Text>
+
+
+        </View>
+
+        <View style={styles.whiteBoxLine}/>
+
+        <View style={styles.iconTextWrapper}>
+          <AntDesign name='delete' size={24} color='#E4AF0B'/>
+
+          <Text style={styles.textButtons}>N/A</Text>
+
+        </View>
+
+      </View>
+
+      
     </View>
 
 
@@ -64,7 +87,6 @@ const styles = StyleSheet.create({
     height: 100,
     alignSelf: 'center',
     justifyContent: 'center',
-    marginTop: 20,
   },
   whiteBoxLine: { // Style for white button lines
     backgroundColor: '#C6C5CA',
@@ -76,18 +98,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-  loginBox: { // Style for grey search bar
-    backgroundColor: '#E4E3E9',
-    borderWidth: 0,
-    borderRadius: 20,
-    width: 350,
-    height: 50,
-    alignSelf: 'center',
-    justifyContent: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  textHeader: { // Style for the "Folders" header
+  textHeader: { // Style for the title header
     fontWeight: 'bold',
     fontSize: 50,
     color: 'black',
@@ -102,17 +113,20 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 10,
   },
-  textLogin: { // Style for search bar text
-    fontWeight: 'regular',
-    fontSize: 20,
-    color: '#807F85',
-    marginLeft: 20,
-  },
   textButtons: { // Style for button text
     fontWeight: 'regular',
     fontSize: 20,
     color: 'black',
     marginLeft: 20,
+  },
+  linkText: { // Style for link text
+    fontWeight: 'regular',
+    fontSize: 20,
+    color: '#E4AF0B',
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 50,
+    alignSelf: 'flex-start',
   },
   iconTextWrapper: {
     flexDirection: 'row',

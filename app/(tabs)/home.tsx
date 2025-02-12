@@ -25,33 +25,19 @@ export default function App() {
 
 
       <View style={styles.whiteBox}>
-
         <Link href="/notes" style={styles.iconTextWrapper}>
-
           <View style={styles.iconTextWrapper}>
-            
             <AntDesign name='filetext1' size={24} color='#E4AF0B'/>
-
             <Text style={styles.textButtons}>Notes App Lab</Text>
-            
           </View>
-
         </Link>
-
         <View style={styles.whiteBoxLine}/>
-
         <Link href="/lab_3" style={styles.iconTextWrapper}>
-
           <View style={styles.iconTextWrapper}>
-
             <AntDesign name='user' size={24} color='#E4AF0B'/>
-            
             <Text style={styles.textButtons}>Lab 3</Text>
-
-
           </View>
         </Link>
-
       </View>
 
 

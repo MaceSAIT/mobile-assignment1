@@ -13,9 +13,9 @@ export default function App() {
       <StatusBar style="auto" />
 
 
-      <Text style={styles.textHeader}>Calgary</Text>
-      <Link style={styles.linkText} href='https://www.calgary.ca/home.html'>City Page</Link>
-      <Image source={{uri: 'https://www.lifeincalgary.ca/assets/ImageTextElement/Life-in-Calgary/Lifestyle/WhatIsLifeInCalgary2__ScaleWidthWzgwMF0.jpg'}} style={{ width: 250, height: 250, alignSelf: 'center'}}/>
+      <Text style={styles.textHeader}>Edmonton</Text>
+      <Link style={styles.linkText} href='https://www.edmonton.ca/'>City Page</Link>
+      <Image source={{uri: 'https://cityuniversity.ca/wp-content/uploads/2021/01/iStock-1136615456-scaled.jpg'}} style={{width: 250, height: 250, alignSelf: 'center'}}/>
 
 
 
@@ -24,8 +24,8 @@ export default function App() {
       <View style={styles.whiteBox}>
         <View style={styles.iconTextWrapper}>
           <Text style={styles.textBody}>
-            Calgary, a cosmopolitan Alberta city with numerous skyscrapers, owes its rapid growth to its status as the centre of Canada's oil industry.
-            Known for the Calgary Stampede, its massive July rodeo and festival that grew out of the farming exhibitions once presented here.
+          Edmonton is the capital city of the Canadian province of Alberta.
+          It is situated on the North Saskatchewan River and is the centre of the Edmonton Metropolitan Region, which is surrounded by Alberta's central region.
           </Text>
         </View>
       </View>

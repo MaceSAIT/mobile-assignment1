@@ -53,6 +53,14 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <FontAwesome6 size={28} name="tree-city" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="welcome"
+        options={{
+          title: 'Welcome',
+          tabBarIcon: ({ color }) => <FontAwesome6 size={28} name="tree-city" color={color} />,
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }

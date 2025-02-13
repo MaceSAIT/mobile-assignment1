@@ -35,7 +35,7 @@ const Login = () => {
 
         if (user) {
             // Successful login, navigate to Calgary Page
-            router.push('/welcome');
+            router.push('/yyc');
         } else {
             Alert.alert("Error", "Invalid username or password.");
         }
